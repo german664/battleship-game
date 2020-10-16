@@ -1,0 +1,72 @@
+body {
+  background: rgb(209, 209, 209);
+}
+#board {
+  width: 500px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#board div {
+  width: 45px;
+  border: 0.5px solid rgb(126, 126, 126);
+  height: 45px;
+  margin: 1px 1px;
+  background: rgb(230, 230, 230);
+  display: flex;
+  color: rgb(131, 131, 131);
+  font-size: 75%;
+}
+.numerosX {
+  display: flex;
+  justify-content: center;
+  font-size: 120%;
+}
+.numeroX {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  margin: 1px;
+}
+#board div:hover {
+  background: rgb(168, 168, 168);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.found {
+  background: red !important;
+}
+.missed {
+  background: rgb(168, 168, 168) !important;
+}
+.posicion {
+  display: flex;
+  justify-content: center;
+}
+#posiciones {
+  padding: 10px;
+}
+.border {
+  box-shadow: 0px 0px 5px 2px yellow inset;
+}
+.hide {
+  display: none;
+}
+h2 {
+  margin-top: 0px;
+}
+#disparar {
+  margin-right: 5px;
+}
+.tablero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numeroY {
+  font-size: 120%;
+  height: 45px;
+  margin: 5px 7px;
+  display: flex;
+  align-items: center;
+}
