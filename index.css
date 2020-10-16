@@ -17,10 +17,31 @@ body {
   color: rgb(131, 131, 131);
   font-size: 75%;
 }
+
+#board2 {
+  width: 500px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#board2 div {
+  width: 45px;
+  border: 0.5px solid rgb(126, 126, 126);
+  height: 45px;
+  margin: 1px 1px;
+  background: rgb(228, 241, 243);
+  display: flex;
+  color: rgb(131, 131, 131);
+  font-size: 75%;
+}
+
 .numerosX {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   font-size: 120%;
+}
+.numerosY {
+  margin-top: 15px;
 }
 .numeroX {
   width: 45px;
@@ -29,6 +50,11 @@ body {
   margin: 1px;
 }
 #board div:hover {
+  background: rgb(168, 168, 168);
+  transition: 0.3s;
+  cursor: pointer;
+}
+#board2 div:hover {
   background: rgb(168, 168, 168);
   transition: 0.3s;
   cursor: pointer;
@@ -42,8 +68,10 @@ body {
 .posicion {
   display: flex;
   justify-content: center;
+  margin-top: 6px;
 }
-#posiciones {
+#posiciones1,
+#posiciones2 {
   padding: 10px;
 }
 .border {
@@ -55,11 +83,13 @@ body {
 h2 {
   margin-top: 0px;
 }
-#disparar {
+#disparar,
+#disparar2 {
   margin-right: 5px;
 }
 .tablero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -69,4 +99,11 @@ h2 {
   margin: 5px 7px;
   display: flex;
   align-items: center;
+}
+.twoBoards {
+  display: flex;
+}
+.player {
+  display: flex;
+  flex-direction: column;
 }
