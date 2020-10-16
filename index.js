@@ -26,13 +26,14 @@ const computerTurn = () => {
         matriz.splice(randomNumber, 1)
         const target = document.getElementById("board2")
         const targeted = target.getElementsByClassName(intento)[0]
+
         if (barco5.includes(intento) || barco6.includes(intento) || barco7.includes(intento)) {
 
             targeted.classList.add('found');
 
             counter2++
-            if (counter2++ === 9) {
-                elmensaje.classList.remove('hide')
+            if (counter2 === 9) {
+                mensaje2.classList.remove('hide')
             }
         } else {
             targeted.classList.add('missed')
