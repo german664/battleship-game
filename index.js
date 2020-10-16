@@ -20,12 +20,13 @@ const checkIfFind = (e) => {
         }
     } else {
         e.target.classList.add('missed')
+
     }
 }
 
 
 const createBoard = () => {
-    for (let i = 1; i <= 90; i++) {
+    for (let i = 0; i <= 89; i++) {
         let box = document.createElement('div')
         box.id = i
         box.classList.add('boxes')
@@ -35,7 +36,7 @@ const createBoard = () => {
         if (barco1.length < 1) {
             randomNumber = Math.floor(Math.random() * 80) + 1
             if (!barco1.includes(randomNumber)) {
-                if (randomNumber % 10 === 0) {
+                if ((randomNumber + 1).toString().split('')[1] == 0) {
                     barco1.push(randomNumber, randomNumber - 1)
                 } else {
                     barco1.push(randomNumber, randomNumber + 1)
@@ -44,9 +45,9 @@ const createBoard = () => {
         }
 
         if (barco2.length < 1) {
-            randomNumber = Math.floor(Math.random() * 80) + 1
+            randomNumber = Math.floor(Math.random() * 89) + 1
             if (!barco1.includes(randomNumber) && !barco1.includes(randomNumber - 1) && !barco1.includes(randomNumber - 2) && !barco1.includes(randomNumber + 1) && !barco1.includes(randomNumber + 2) && !barco2.includes(randomNumber)) {
-                if (randomNumber % 10 === 0 || (randomNumber + 1) % 10 === 0) {
+                if ((randomNumber + 1).toString().split('')[1] == 0 || (randomNumber + 2).toString().split('')[1] == 0) {
                     barco2.push(randomNumber, randomNumber - 1, randomNumber - 2)
                 } else {
                     barco2.push(randomNumber, randomNumber + 1, randomNumber + 2)
@@ -57,7 +58,7 @@ const createBoard = () => {
         if (barco4.length < 1) {
             randomNumber = Math.floor(Math.random() * 80) + 1;
             if (!barco1.includes(randomNumber) && !barco1.includes(randomNumber + 10) && !barco1.includes(randomNumber + 20) && !barco1.includes(randomNumber + 30) && !barco1.includes(randomNumber - 10) && !barco1.includes(randomNumber - 20) && !barco1.includes(randomNumber - 30) && !barco2.includes(randomNumber) && !barco2.includes(randomNumber + 10) && !barco2.includes(randomNumber + 20) && !barco2.includes(randomNumber + 30) && !barco2.includes(randomNumber - 10) && !barco2.includes(randomNumber - 20) && !barco2.includes(randomNumber - 30) && !barco3.includes(randomNumber) && !barco3.includes(randomNumber + 10) && !barco3.includes(randomNumber + 20) && !barco3.includes(randomNumber + 30) && !barco3.includes(randomNumber - 10) && !barco3.includes(randomNumber - 20) && !barco3.includes(randomNumber - 30) && !barco4.includes(randomNumber)) {
-                if (randomNumber > 60) {
+                if (randomNumber > 59) {
                     barco4.push(randomNumber, randomNumber - 10, randomNumber - 20, randomNumber - 30)
                 } else {
                     barco4.push(randomNumber, randomNumber + 10, randomNumber + 20, randomNumber + 30)
@@ -83,7 +84,6 @@ disparar.addEventListener("click", () => {
     } else {
         boxEscogida.classList.add('missed')
     }
-    console.log(boxEscogida)
 })
 
 
